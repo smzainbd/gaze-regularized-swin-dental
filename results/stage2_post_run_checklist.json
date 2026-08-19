@@ -1,0 +1,36 @@
+{
+  "verdict": "GREEN",
+  "verdict_msg": "All critical checks passed and exports look complete. FREEZE weights and proceed to faithfulness. Do NOT re-run to chase AUROC.",
+  "section_a": {
+    "A1: Stage 1 checkpoint exists": true,
+    "A2: All gaze folds finished": true,
+    "A3: All ablation folds finished": true,
+    "A4: Negative report generated": true,
+    "A5: Healthy masks strictly zero": true,
+    "A6: SMOKE_TEST is False": true,
+    "A7: Resume/recipe consistency": true,
+    "A8: Dice empty-mask fix present": true
+  },
+  "section_b": {
+    "B1: Held-out test numbers present": true,
+    "B2: CV summary present": true,
+    "B3: Stage1 baseline recorded": true,
+    "B4: Paired diff / interpretation": true,
+    "B5: Predictions CSV exists": true,
+    "B6: Histories saved": true
+  },
+  "details": {
+    "A1": "/content/drive/MyDrive/DENTAL/checkpoints/stage1_best.pth",
+    "A2_missing": [],
+    "A3_missing": [],
+    "A5": "OK: 32/32 lesion samples have mask pixels; 0/8 healthy samples nonzero (expect 0)",
+    "A6_smoke": false,
+    "A7": "ok",
+    "A8": "dice_loss_with_logits has empty-mask gate",
+    "B6_missing_hist": []
+  },
+  "notes": [],
+  "num_folds": 5,
+  "run_gaze_ablation": true,
+  "project": "/content/drive/MyDrive/DENTAL"
+}

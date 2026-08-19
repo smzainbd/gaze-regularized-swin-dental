@@ -1,0 +1,103 @@
+{
+  "generated_at_utc": "2026-08-19T03:39:34.726171+00:00",
+  "summary_table": "results\\paper_summary_table.json",
+  "theme": "figures\\nb08_theme.json",
+  "figures": [
+    {
+      "name": "fig05_table1_detection",
+      "paths": [
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig05_table1_detection.png",
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig05_table1_detection.pdf"
+      ]
+    },
+    {
+      "name": "fig01_roc_tufts_test",
+      "paths": [
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig01_roc_tufts_test.png",
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig01_roc_tufts_test.pdf"
+      ],
+      "status": "ok"
+    },
+    {
+      "name": "fig02_dentex_ood_summary",
+      "paths": [
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig02_dentex_ood_summary.png",
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig02_dentex_ood_summary.pdf"
+      ],
+      "status": "ok"
+    },
+    {
+      "name": "fig03_aopc_faithfulness_curve",
+      "paths": [
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig03_aopc_faithfulness_curve.png",
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig03_aopc_faithfulness_curve.pdf"
+      ],
+      "status": "ok"
+    },
+    {
+      "name": "fig04_forest_detection_auroc",
+      "paths": [
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig04_forest_detection_auroc.png",
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig04_forest_detection_auroc.pdf"
+      ],
+      "status": "ok"
+    },
+    {
+      "name": "fig06_cv_fold_val_auroc",
+      "paths": [
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig06_cv_fold_val_auroc.png",
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig06_cv_fold_val_auroc.pdf"
+      ],
+      "status": "ok"
+    },
+    {
+      "name": "fig07_gaze_vs_ablation_cv",
+      "paths": [
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig07_gaze_vs_ablation_cv.png",
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig07_gaze_vs_ablation_cv.pdf"
+      ],
+      "status": "ok"
+    },
+    {
+      "name": "fig08_faithfulness_alignment",
+      "paths": [
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig08_faithfulness_alignment.png",
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig08_faithfulness_alignment.pdf"
+      ],
+      "status": "ok"
+    },
+    {
+      "name": "fig09_error_taxonomy",
+      "paths": [
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig09_error_taxonomy.png",
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig09_error_taxonomy.pdf"
+      ],
+      "status": "ok"
+    },
+    {
+      "name": "fig10_power_sample_size",
+      "paths": [
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig10_power_sample_size.png",
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig10_power_sample_size.pdf"
+      ],
+      "status": "ok"
+    },
+    {
+      "name": "fig11_paired_auroc_diffs",
+      "paths": [
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig11_paired_auroc_diffs.png",
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig11_paired_auroc_diffs.pdf"
+      ],
+      "status": "ok"
+    },
+    {
+      "name": "fig12_nss_cc_scatter",
+      "paths": [
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig12_nss_cc_scatter.png",
+        "C:\\Users\\smxai\\Downloads\\gaze-regularized-swin-dental\\figures\\fig12_nss_cc_scatter.pdf"
+      ],
+      "status": "ok"
+    }
+  ],
+  "attention_overlays": "not_requested"
+}

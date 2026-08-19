@@ -1,0 +1,27 @@
+{
+  "phase": "stage2_tufts_gaze_finetune",
+  "training_dataset": "tufts_tdd",
+  "init_checkpoint": "checkpoints/stage1_best.pth",
+  "gaze_lambda": 0.1,
+  "best_epoch": 20,
+  "Tufts_test_Dice": 0.4126983471907385,
+  "Tufts_test_F1": 0.4126984126984127,
+  "Tufts_test_Recall": 0.38235294117647056,
+  "Tufts_test_AUROC": 0.5784313725490196,
+  "Tufts_CM": {
+    "TN": 50,
+    "FP": 16,
+    "FN": 21,
+    "TP": 13
+  },
+  "OralXray_forgetting_Dice": 0.9534591154991231,
+  "OralXray_forgetting_F1": 0.9534591194968554,
+  "OralXray_forgetting_Recall": 0.9132530120481928,
+  "OralXray_forgetting_AUROC": 0.9528781793842034,
+  "OralXray_forgetting_CM": {
+    "TN": 21,
+    "FP": 3,
+    "FN": 108,
+    "TP": 1137
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "n_images": 100,
+  "n_healthy": 66,
+  "n_lesion": 34,
+  "counts": {
+    "tn": 56,
+    "fp_type_b_misattribution": 8,
+    "fn_blind": 25,
+    "fp_type_a_hallucination": 10,
+    "fn_attentive": 1
+  },
+  "fp_type_a_rate_among_healthy": 0.15151515151515152,
+  "fp_type_b_rate_among_tp_label": 1.0,
+  "fn_attentive_rate_among_fn": 0.038461538461538464,
+  "fn_blind_rate_among_fn": 0.9615384615384616,
+  "fp_type_a_count": 10,
+  "fp_type_b_misattribution_count": 8,
+  "fn_attentive_count": 1,
+  "fn_blind_count": 25,
+  "type_b_delta_mean": -0.005182864298888569,
+  "definitions": {
+    "fp_type_a": "y=0, pred=1 (hallucination) \u2014 same as CXR Type A",
+    "fp_type_b_adapted": "y=1, pred=1 but top-mass in lesion <= analytic null (right label, wrong place). Binary stand-in for CXR Type B; not counted in FP rate.",
+    "fn_attentive": "y=1, pred=0 and (peak in lesion OR mass>=tau)",
+    "fn_blind": "y=1, pred=0 and not attentive"
+  },
+  "threshold": 0.8191031217575073,
+  "checkpoint": "G:\\My Drive\\DENTAL\\checkpoints\\stage2_refit_best.pth"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "fold": 0,
+    "val_AUROC": 0.5978784956605593,
+    "test_AUROC": 0.6100713012477719,
+    "val_Dice": 0.5103447923900143,
+    "test_Dice": 0.4137930321046496,
+    "best_val_auroc": 0.5978784956605593,
+    "checkpoint": "checkpoints/stage2_gaze_fold0_best.pth"
+  },
+  {
+    "fold": 1,
+    "val_AUROC": 0.7262708362033338,
+    "test_AUROC": 0.6443850267379679,
+    "val_Dice": 0.6216215796201635,
+    "test_Dice": 0.5882352076124694,
+    "best_val_auroc": 0.7262708362033338,
+    "checkpoint": "checkpoints/stage2_gaze_fold1_best.pth"
+  },
+  {
+    "fold": 2,
+    "val_AUROC": 0.6835652293704367,
+    "test_AUROC": 0.5900178253119429,
+    "val_Dice": 0.5906039872077861,
+    "test_Dice": 0.46666658888890183,
+    "best_val_auroc": 0.6835652293704367,
+    "checkpoint": "checkpoints/stage2_gaze_fold2_best.pth"
+  },
+  {
+    "fold": 3,
+    "val_AUROC": 0.6903154704504753,
+    "test_AUROC": 0.658645276292335,
+    "val_Dice": 0.5714285359361158,
+    "test_Dice": 0.5599999253333433,
+    "best_val_auroc": 0.6903154704504753,
+    "checkpoint": "checkpoints/stage2_gaze_fold3_best.pth"
+  },
+  {
+    "fold": 4,
+    "val_AUROC": 0.6884909786768727,
+    "test_AUROC": 0.5757575757575757,
+    "val_Dice": 0.581560242442536,
+    "test_Dice": 0.5486725178165913,
+    "best_val_auroc": 0.6884909786768727,
+    "checkpoint": "checkpoints/stage2_gaze_fold4_best.pth"
+  }
+]

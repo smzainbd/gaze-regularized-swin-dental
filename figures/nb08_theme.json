@@ -1,0 +1,25 @@
+{
+  "palette": {
+    "stage1": "#64748B",
+    "gaze": "#2563EB",
+    "ablation": "#9333EA",
+    "refit": "#0D9488",
+    "resnet": "#EA580C",
+    "ensemble": "#0891B2",
+    "dentex_s1": "#64748B",
+    "dentex_s2": "#DC2626",
+    "positive": "#16A34A",
+    "negative": "#DC2626",
+    "ci_fill": "#94A3B8",
+    "grid": "#E2E8F0",
+    "text": "#1E293B",
+    "muted": "#64748B"
+  },
+  "k_levels_pct": [
+    5,
+    10,
+    15,
+    20,
+    50
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "mode": "cpu",
+  "gpu_required": false,
+  "real_stats_done": true,
+  "code_check_passed": true,
+  "all_inputs_present": true,
+  "inputs": {
+    "stage1_metrics": "results/stage1_metrics.json",
+    "stage2_oralxray_metrics": "results/stage2_oralxray_metrics.json",
+    "stage1_tufts_preds": "results/stage1_tufts_zero_shot_predictions.csv",
+    "stage2_tufts_preds": "results/stage2_refit_test_predictions.csv",
+    "stage2_refit_metrics": "results/stage2_refit_metrics.json",
+    "dentex_stage2_preds": "results/dentex_per_image_predictions.csv",
+    "dentex_baseline_preds": "results/dentex_baseline_predictions.csv"
+  },
+  "tufts_pairing": {
+    "layout": "paired_probs",
+    "stage2_file": "results/stage2_refit_test_predictions.csv",
+    "stage2_prob_col": "prob_stage2_refit",
+    "stage2_threshold": 0.7939968109130859,
+    "stage1_threshold": 0.0962478294968605,
+    "threshold_source": "stored_refit_metrics"
+  },
+  "dentex_interpretation": "No discrimination difference on DENTEX (null OOD result)",
+  "forgetting_ratio": 0.03960365057675738
+}

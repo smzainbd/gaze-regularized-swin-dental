@@ -1,0 +1,419 @@
+{
+  "generated_at_utc": "2026-08-19T03:39:34.724957+00:00",
+  "notebook": "NB08_figures",
+  "primary_claim": "NB04 5-fold CV + held-out bootstrap (null gaze benefit on test)",
+  "tufts_detection": {
+    "cv_val_auroc": {
+      "stage1": {
+        "mean": 0.6121284593752173,
+        "std": 0.042537489397400284,
+        "per_fold": [
+          0.5376773660283787,
+          0.6233640997382559,
+          0.6251549800247969,
+          0.6288745006199201,
+          0.6455713504647349
+        ],
+        "bootstrap_pooled": {
+          "point": 0.6119418586738848,
+          "mean": 0.611884314782262,
+          "lower": 0.5730864072136734,
+          "upper": 0.64955568173239,
+          "n": 900
+        }
+      },
+      "gaze_lambda_gt0": {
+        "mean": 0.6773042020723355,
+        "std": 0.047538962008977656,
+        "per_fold": [
+          0.5978784956605593,
+          0.7262708362033338,
+          0.6835652293704367,
+          0.6903154704504753,
+          0.6884909786768727
+        ],
+        "bootstrap_pooled": {
+          "point": 0.6675964437402345,
+          "mean": 0.6673740034964125,
+          "lower": 0.6292580751199081,
+          "upper": 0.704392130086662,
+          "n": 900
+        }
+      },
+      "ablation_lambda0": {
+        "mean": 0.675276945472414,
+        "std": 0.03408516701901409,
+        "per_fold": [
+          0.6080727372916379,
+          0.6958258713321394,
+          0.6969279515084722,
+          0.6944482711117234,
+          0.6811098961180975
+        ],
+        "note": "Fold means only; no pooled-image bootstrap for ablation."
+      },
+      "resnet50_external": {
+        "mean": 0.6618191056504883,
+        "std": 0.020436871899109105,
+        "per_fold": [
+          0.6856316297010607,
+          0.6454057032649125,
+          0.674473067915691,
+          0.667171786747486,
+          0.6364133406232915
+        ],
+        "note": "External ImageNet ResNet-50; fold means only on CV val."
+      },
+      "paired_gaze_minus_stage1_bootstrap": {
+        "mean_diff": 0.05548968871415065,
+        "lower": 0.024917601183669303,
+        "upper": 0.08644647904520297,
+        "n": 900
+      }
+    },
+    "held_out_test_auroc": {
+      "stage1": {
+        "point": 0.5846702317290553,
+        "mean": 0.5878542970961719,
+        "lower": 0.46216464092405796,
+        "upper": 0.7095681408855432,
+        "n": 100
+      },
+      "gaze_cv_ensemble": {
+        "point": 0.6265597147950088,
+        "mean": 0.6288227317345189,
+        "lower": 0.5025885130494506,
+        "upper": 0.7465298474754558,
+        "n": 100
+      },
+      "ablation_fold_mean": {
+        "mean": 0.6121212121212121,
+        "std": 0.01343595820596792,
+        "per_fold": [
+          0.587344028520499,
+          0.6203208556149733,
+          0.6167557932263814,
+          0.6261140819964349,
+          0.6100713012477719
+        ]
+      },
+      "stage2_refit_secondary": {
+        "point": 0.6216577540106952,
+        "mean": 0.6236457221887838,
+        "lower": 0.4958447795248503,
+        "upper": 0.7410906133739215,
+        "n": 100
+      },
+      "resnet50_refit_style": {
+        "point": 0.6109625668449198,
+        "mean": 0.6130912735359675,
+        "lower": 0.47822147817460314,
+        "upper": 0.7362000159629658,
+        "n": 100
+      },
+      "paired_gaze_minus_stage1": {
+        "mean_diff": 0.040968434638347,
+        "lower": -0.03993055555555558,
+        "upper": 0.12088448660714284,
+        "n": 100
+      },
+      "paired_refit_minus_stage1": {
+        "mean_diff": 0.035791425092612045,
+        "lower": -0.04515506411692223,
+        "upper": 0.11729677852884818,
+        "n": 100
+      },
+      "paired_refit_minus_resnet": {
+        "mean_diff": 0.010554448652816368,
+        "lower": -0.08658941709111481,
+        "upper": 0.111159620098039,
+        "n": 100
+      },
+      "paired_resnet_minus_stage1": {
+        "mean_diff": 0.02523697643979567,
+        "lower": -0.0886912972085387,
+        "upper": 0.13462001489876804,
+        "n": 100
+      }
+    },
+    "refit_secondary_test": {
+      "stage2_auroc": 0.6216577540106952,
+      "stage1_auroc": 0.5846702317290553,
+      "bootstrap": {
+        "stage2": {
+          "point": 0.6216577540106952,
+          "mean": 0.6236457221887838,
+          "lower": 0.4958447795248503,
+          "upper": 0.7410906133739215,
+          "n": 100
+        },
+        "stage1": {
+          "point": 0.5846702317290553,
+          "mean": 0.5878542970961719,
+          "lower": 0.46216464092405796,
+          "upper": 0.7095681408855432,
+          "n": 100
+        }
+      },
+      "note": "Trained on full train_split (CV pool). Held-out test evaluated once at the end. Primary detection claims must use NB04 5-fold CV, not this table alone."
+    },
+    "power_analysis_held_out": {
+      "delta_auroc": 0.05,
+      "null_auroc": 0.5846702317290553,
+      "alt_auroc": 0.6346702317290553,
+      "prevalence": 0.34,
+      "alpha": 0.05,
+      "power": 0.8,
+      "approx_n_per_group": 2230,
+      "approx_total_same_set": 2230,
+      "note": "Approximate; use bootstrap CI on actual CV predictions for reporting."
+    }
+  },
+  "resnet50_baseline": {
+    "cv_val_mean": 0.6618191056504883,
+    "cv_test_mean": 0.6083778966131907,
+    "cv_test_std": 0.04098901314953872,
+    "refit_test_auroc": 0.6109625668449198,
+    "refit_test_bootstrap": {
+      "point": 0.6109625668449198,
+      "mean": 0.6130912735359675,
+      "lower": 0.47822147817460314,
+      "upper": 0.7362000159629658,
+      "n": 100
+    },
+    "in_statistics_p_values": false,
+    "note": "Merged here for paper table; not duplicated in statistics/p_values.json."
+  },
+  "dentex_ood": {
+    "n_labeled": 1005,
+    "prevalence": 0.9313432835820895,
+    "auroc": {
+      "stage1": {
+        "point": 0.5179765886287625,
+        "mean": 0.5190150017931128,
+        "lower": 0.4470396264626116,
+        "upper": 0.588827655724294,
+        "n": 1005
+      },
+      "stage2": {
+        "point": 0.4818608324043107,
+        "mean": 0.48127470531714517,
+        "lower": 0.41261309256088846,
+        "upper": 0.5516898450179805,
+        "n": 1005
+      },
+      "paired_diff_stage2_minus_stage1": {
+        "mean_diff": -0.037740296475967564,
+        "lower": -0.12857691172257993,
+        "upper": 0.048937336971816243,
+        "n": 1005,
+        "n_boot_effective": 2000,
+        "point_diff": -0.03611575622445179
+      }
+    },
+    "average_precision": {
+      "stage2": {
+        "point_estimate": 0.9321263277063777,
+        "mean": 0.9325423410110428,
+        "lower": 0.9103768565013931,
+        "upper": 0.9525114143712747,
+        "n": 1005,
+        "n_boot_effective": 2000
+      },
+      "stage1": {
+        "point_estimate": 0.9325140622873851,
+        "mean": 0.9330680891739749,
+        "lower": 0.910462653862538,
+        "upper": 0.9541958841763123,
+        "n": 1005,
+        "n_boot_effective": 2000
+      },
+      "paired_diff_stage2_minus_stage1": {
+        "mean_diff": -0.0005257481629319505,
+        "lower": -0.021537922117655435,
+        "upper": 0.021305592262471643,
+        "n": 1005,
+        "n_boot_effective": 2000,
+        "point_diff": -0.0003877345810073818
+      },
+      "significant_at_0.05": false,
+      "note": "AP is prevalence-sensitive; compare also to random_ap_baseline \u2248 prevalence."
+    },
+    "balanced_subsample_auroc": {
+      "ok": true,
+      "n_negatives": 69,
+      "n_positives_per_draw": 69,
+      "balanced_n_per_draw": 138,
+      "n_draws_requested": 1000,
+      "stage1_auroc_balanced": {
+        "mean": 0.5187433312329344,
+        "lower": 0.4498792270531401,
+        "upper": 0.5821334803612687,
+        "n_draws_effective": 1000
+      },
+      "stage2_auroc_balanced": {
+        "mean": 0.4815276202478471,
+        "lower": 0.41282818735559756,
+        "upper": 0.547810333963453,
+        "n_draws_effective": 1000
+      },
+      "paired_auroc_diff_stage2_minus_stage1_balanced": {
+        "mean": -0.03721571098508717,
+        "lower": -0.11573724007561448,
+        "upper": 0.04232566687670647,
+        "n_draws_effective": 1000
+      },
+      "discrimination_significant_balanced": false,
+      "interpretation": "No discrimination difference on balanced DENTEX draws (null OOD)"
+    },
+    "interpretation": "No discrimination difference on balanced DENTEX draws (null OOD)",
+    "cohort_note": "Labeled DENTEX subset is ~93% positive (n=1005). Report AUROC + balanced subsample; avoid threshold accuracy claims."
+  },
+  "faithfulness": {
+    "n_images": 100,
+    "aopc_auc": {
+      "point": 0.048446656763553614,
+      "mean": 0.048446656763553614,
+      "lower": 0.031209615061680473,
+      "upper": 0.06293760204646322,
+      "n": 100
+    },
+    "nss": {
+      "point": 0.017846028788592434,
+      "mean": 0.017846028788592434,
+      "lower": -0.030233060056522383,
+      "upper": 0.06781445701774279,
+      "n": 100
+    },
+    "cc": {
+      "point": -0.003521344636988598,
+      "mean": -0.003521344636988598,
+      "lower": -0.02751691889299665,
+      "upper": 0.02106937523804778,
+      "n": 100
+    },
+    "ablation": {
+      "aopc_auc": {
+        "point": 0.045562688791089594,
+        "mean": 0.045562688791089594,
+        "lower": 0.032316365610808126,
+        "upper": 0.058071199410905425,
+        "n": 100
+      },
+      "nss": {
+        "point": 0.017045269987855126,
+        "mean": 0.017045269987855126,
+        "lower": -0.03498030359591506,
+        "upper": 0.07154917684025457,
+        "n": 100
+      },
+      "cc": {
+        "point": -0.0039458729612574725,
+        "mean": -0.0039458729612574725,
+        "lower": -0.027189866818903067,
+        "upper": 0.020461547583725512,
+        "n": 100
+      },
+      "paired_diff_gaze_minus_ablation": {
+        "AOPC_AUC": {
+          "mean_diff": 0.002883967972464031,
+          "lower": -0.0014564920183685103,
+          "upper": 0.006993658511588968,
+          "n": 100,
+          "n_boot": 2000
+        },
+        "NSS": {
+          "mean_diff": 0.0008007588007373044,
+          "lower": 0.0005132758168991386,
+          "upper": 0.0011138990838987805,
+          "n": 100,
+          "n_boot": 2000
+        },
+        "CC": {
+          "mean_diff": 0.00042452832426887583,
+          "lower": 0.00028457556474630524,
+          "upper": 0.0005817481860482962,
+          "n": 100,
+          "n_boot": 2000
+        }
+      }
+    },
+    "error_taxonomy_counts": {
+      "tn": 56,
+      "fp_type_b_misattribution": 8,
+      "fn_blind": 25,
+      "fp_type_a_hallucination": 10,
+      "fn_attentive": 1
+    }
+  },
+  "secondary_statistics": {
+    "mcnemar_tufts_healthy": {
+      "p_value": 0.7744140625,
+      "significant_at_0.05": false,
+      "table": [
+        [
+          51,
+          5
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "pairing": {
+        "layout": "paired_probs",
+        "stage2_file": "results/stage2_refit_test_predictions.csv",
+        "stage2_prob_col": "prob_stage2_refit",
+        "stage2_threshold": 0.7939968109130859,
+        "stage1_threshold": 0.0962478294968605,
+        "threshold_source": "stored_refit_metrics"
+      },
+      "note": "Pilot / underpowered (n_healthy ~66). Primary detection claim is NB04 CV."
+    },
+    "forgetting_ratio": {
+      "stage1_OralXrays_Dice": 0.962593512208672,
+      "stage2_OralXrays_Dice": 0.9244712951037061,
+      "forgetting_ratio": 0.03960365057675738,
+      "stage2_source": "results/stage2_oralxray_metrics.json",
+      "stage2_checkpoint": "/content/drive/MyDrive/DENTAL/checkpoints/stage2_gaze_fold1_best.pth"
+    },
+    "dentex_discrimination": {
+      "stage2_auroc": {
+        "mean": 0.48127470531714517,
+        "lower": 0.41261309256088846,
+        "upper": 0.5516898450179805,
+        "n": 1005,
+        "n_boot_effective": 2000,
+        "point_estimate": 0.4818608324043107
+      },
+      "stage1_auroc": {
+        "mean": 0.5190150017931128,
+        "lower": 0.4470396264626116,
+        "upper": 0.588827655724294,
+        "n": 1005,
+        "n_boot_effective": 2000,
+        "point_estimate": 0.5179765886287625
+      },
+      "paired_auroc_diff_stage2_minus_stage1": {
+        "mean_diff": -0.037740296475967564,
+        "lower": -0.12857691172257993,
+        "upper": 0.048937336971816243,
+        "n": 1005,
+        "n_boot_effective": 2000
+      },
+      "significant_at_0.05": false,
+      "interpretation": "No discrimination difference on DENTEX (null OOD result)",
+      "n_images": 1005,
+      "prevalence": 0.9313432835820895
+    }
+  },
+  "sources": {
+    "part1_report": "results/stage2_part1_negative_report.json",
+    "refit_metrics": "results/stage2_refit_metrics.json",
+    "resnet_cv": "results/resnet50_baseline_cv_summary.json",
+    "resnet_refit": "results/resnet50_baseline_refit_metrics.json",
+    "faithfulness": "faithfulness/faithfulness_metrics.json",
+    "dentex_ood": "statistics/dentex_ood_hardened.json",
+    "p_values": "statistics/p_values.json"
+  }
+}

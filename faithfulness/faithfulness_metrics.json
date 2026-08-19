@@ -1,0 +1,109 @@
+{
+  "checkpoint": "G:\\My Drive\\DENTAL\\checkpoints\\stage2_refit_best.pth",
+  "n_test_images": 100,
+  "n_with_gaze": 100,
+  "k_levels": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.5
+  ],
+  "AOPC_AUC_curve_mean": 0.04844665676355361,
+  "AOPC_naive_mean_drop": 0.020720298230648044,
+  "AOPC_AUC_per_image_bootstrap": {
+    "mean": 0.048446656763553614,
+    "lower": 0.031209615061680473,
+    "upper": 0.06293760204646322,
+    "n": 100,
+    "n_boot": 2000,
+    "std": 0.08016239806652004
+  },
+  "NSS_bootstrap": {
+    "mean": 0.017846028788592434,
+    "lower": -0.030233060056522383,
+    "upper": 0.06781445701774279,
+    "n": 100,
+    "n_boot": 2000,
+    "std": 0.26981712395284074
+  },
+  "CC_bootstrap": {
+    "mean": -0.003521344636988598,
+    "lower": -0.02751691889299665,
+    "upper": 0.02106937523804778,
+    "n": 100,
+    "n_boot": 2000,
+    "std": 0.12230857432234256
+  },
+  "mean_confidence_drops": [
+    -0.02310347318649292,
+    -0.021771795451641082,
+    -0.006710765659809112,
+    0.020983264446258545,
+    0.13420426100492477
+  ],
+  "ablation": {
+    "checkpoint": "G:\\My Drive\\DENTAL\\checkpoints\\stage2_ablation_fold2_best.pth",
+    "meta": {
+      "fold": 2,
+      "val_AUROC": 0.6969279515084722,
+      "test_AUROC": 0.6167557932263814,
+      "gaze_lambda": 0.0
+    },
+    "AOPC_AUC_per_image_bootstrap": {
+      "mean": 0.045562688791089594,
+      "lower": 0.032316365610808126,
+      "upper": 0.058071199410905425,
+      "n": 100,
+      "n_boot": 2000,
+      "std": 0.06850628837129051
+    },
+    "NSS_bootstrap": {
+      "mean": 0.017045269987855126,
+      "lower": -0.03498030359591506,
+      "upper": 0.07154917684025457,
+      "n": 100,
+      "n_boot": 2000,
+      "std": 0.26961079484240624
+    },
+    "CC_bootstrap": {
+      "mean": -0.0039458729612574725,
+      "lower": -0.027189866818903067,
+      "upper": 0.020461547583725512,
+      "n": 100,
+      "n_boot": 2000,
+      "std": 0.1222745926590577
+    },
+    "paired_diff_gaze_minus_ablation": {
+      "AOPC_AUC": {
+        "mean_diff": 0.002883967972464031,
+        "lower": -0.0014564920183685103,
+        "upper": 0.006993658511588968,
+        "n": 100,
+        "n_boot": 2000
+      },
+      "NSS": {
+        "mean_diff": 0.0008007588007373044,
+        "lower": 0.0005132758168991386,
+        "upper": 0.0011138990838987805,
+        "n": 100,
+        "n_boot": 2000
+      },
+      "CC": {
+        "mean_diff": 0.00042452832426887583,
+        "lower": 0.00028457556474630524,
+        "upper": 0.0005817481860482962,
+        "n": 100,
+        "n_boot": 2000
+      }
+    }
+  },
+  "device": "cpu",
+  "taxonomy_counts": {
+    "tn": 56,
+    "fp_type_b_misattribution": 8,
+    "fn_blind": 25,
+    "fp_type_a_hallucination": 10,
+    "fn_attentive": 1
+  }
+}

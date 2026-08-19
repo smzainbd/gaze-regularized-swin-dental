@@ -1,0 +1,39 @@
+{
+  "real_aopc_done": true,
+  "real_taxonomy_done": true,
+  "checkpoint": "G:\\My Drive\\DENTAL\\checkpoints\\stage2_refit_best.pth",
+  "ablation_checkpoint": "G:\\My Drive\\DENTAL\\checkpoints\\stage2_ablation_fold2_best.pth",
+  "aopc_per_image_ci": {
+    "mean": 0.048446656763553614,
+    "lower": 0.031209615061680473,
+    "upper": 0.06293760204646322,
+    "n": 100,
+    "n_boot": 2000,
+    "std": 0.08016239806652004
+  },
+  "nss_ci": {
+    "mean": 0.017846028788592434,
+    "lower": -0.030233060056522383,
+    "upper": 0.06781445701774279,
+    "n": 100,
+    "n_boot": 2000,
+    "std": 0.26981712395284074
+  },
+  "cc_ci": {
+    "mean": -0.003521344636988598,
+    "lower": -0.02751691889299665,
+    "upper": 0.02106937523804778,
+    "n": 100,
+    "n_boot": 2000,
+    "std": 0.12230857432234256
+  },
+  "n_test_images": 100,
+  "taxonomy_counts": {
+    "tn": 56,
+    "fp_type_b_misattribution": 8,
+    "fn_blind": 25,
+    "fp_type_a_hallucination": 10,
+    "fn_attentive": 1
+  },
+  "device": "cpu"
+}

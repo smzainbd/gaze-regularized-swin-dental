@@ -1,0 +1,328 @@
+{
+  "part": "part1_detection_negative",
+  "num_folds": 5,
+  "cv_gaze_fold_metrics": [
+    {
+      "fold": 0,
+      "val_AUROC": 0.5978784956605593,
+      "test_AUROC": 0.6100713012477719,
+      "val_Dice": 0.5103447923900143,
+      "test_Dice": 0.4137930321046496,
+      "best_val_auroc": 0.5978784956605593,
+      "checkpoint": "checkpoints/stage2_gaze_fold0_best.pth"
+    },
+    {
+      "fold": 1,
+      "val_AUROC": 0.7262708362033338,
+      "test_AUROC": 0.6443850267379679,
+      "val_Dice": 0.6216215796201635,
+      "test_Dice": 0.5882352076124694,
+      "best_val_auroc": 0.7262708362033338,
+      "checkpoint": "checkpoints/stage2_gaze_fold1_best.pth"
+    },
+    {
+      "fold": 2,
+      "val_AUROC": 0.6835652293704367,
+      "test_AUROC": 0.5900178253119429,
+      "val_Dice": 0.5906039872077861,
+      "test_Dice": 0.46666658888890183,
+      "best_val_auroc": 0.6835652293704367,
+      "checkpoint": "checkpoints/stage2_gaze_fold2_best.pth"
+    },
+    {
+      "fold": 3,
+      "val_AUROC": 0.6903154704504753,
+      "test_AUROC": 0.658645276292335,
+      "val_Dice": 0.5714285359361158,
+      "test_Dice": 0.5599999253333433,
+      "best_val_auroc": 0.6903154704504753,
+      "checkpoint": "checkpoints/stage2_gaze_fold3_best.pth"
+    },
+    {
+      "fold": 4,
+      "val_AUROC": 0.6884909786768727,
+      "test_AUROC": 0.5757575757575757,
+      "val_Dice": 0.581560242442536,
+      "test_Dice": 0.5486725178165913,
+      "best_val_auroc": 0.6884909786768727,
+      "checkpoint": "checkpoints/stage2_gaze_fold4_best.pth"
+    }
+  ],
+  "cv_stage1_fold_metrics": [
+    {
+      "fold": 0,
+      "val_AUROC": 0.5376773660283787,
+      "test_AUROC": 0.5846702317290553,
+      "val_Dice": 0.497109797854925,
+      "test_Dice": 0.41509426130296956
+    },
+    {
+      "fold": 1,
+      "val_AUROC": 0.6233640997382559,
+      "test_AUROC": 0.5846702317290553,
+      "val_Dice": 0.5277777411265457,
+      "test_Dice": 0.41509426130296956
+    },
+    {
+      "fold": 2,
+      "val_AUROC": 0.6251549800247969,
+      "test_AUROC": 0.5846702317290553,
+      "val_Dice": 0.5472636543649924,
+      "test_Dice": 0.41509426130296956
+    },
+    {
+      "fold": 3,
+      "val_AUROC": 0.6288745006199201,
+      "test_AUROC": 0.5846702317290553,
+      "val_Dice": 0.5076922686390563,
+      "test_Dice": 0.41509426130296956
+    },
+    {
+      "fold": 4,
+      "val_AUROC": 0.6455713504647349,
+      "test_AUROC": 0.5846702317290553,
+      "val_Dice": 0.5660377002492012,
+      "test_Dice": 0.41509426130296956
+    }
+  ],
+  "cv_ablation_fold_metrics": [
+    {
+      "fold": 0,
+      "val_AUROC": 0.6080727372916379,
+      "test_AUROC": 0.587344028520499,
+      "gaze_lambda": 0.0
+    },
+    {
+      "fold": 1,
+      "val_AUROC": 0.6958258713321394,
+      "test_AUROC": 0.6203208556149733,
+      "gaze_lambda": 0.0
+    },
+    {
+      "fold": 2,
+      "val_AUROC": 0.6969279515084722,
+      "test_AUROC": 0.6167557932263814,
+      "gaze_lambda": 0.0
+    },
+    {
+      "fold": 3,
+      "val_AUROC": 0.6944482711117234,
+      "test_AUROC": 0.6261140819964349,
+      "gaze_lambda": 0.0
+    },
+    {
+      "fold": 4,
+      "val_AUROC": 0.6811098961180975,
+      "test_AUROC": 0.6100713012477719,
+      "gaze_lambda": 0.0
+    }
+  ],
+  "aggregate_gaze_val": {
+    "AUROC": {
+      "mean": 0.6773042020723355,
+      "std": 0.047538962008977656,
+      "per_fold": [
+        0.5978784956605593,
+        0.7262708362033338,
+        0.6835652293704367,
+        0.6903154704504753,
+        0.6884909786768727
+      ],
+      "n_folds": 5
+    },
+    "Dice": {
+      "mean": 0.5751118275193232,
+      "std": 0.04078321218235645,
+      "per_fold": [
+        0.5103447923900143,
+        0.6216215796201635,
+        0.5906039872077861,
+        0.5714285359361158,
+        0.581560242442536
+      ],
+      "n_folds": 5
+    }
+  },
+  "aggregate_gaze_test": {
+    "AUROC": {
+      "mean": 0.6157754010695187,
+      "std": 0.03519145027165521,
+      "per_fold": [
+        0.6100713012477719,
+        0.6443850267379679,
+        0.5900178253119429,
+        0.658645276292335,
+        0.5757575757575757
+      ],
+      "n_folds": 5
+    },
+    "Dice": {
+      "mean": 0.5154734543511911,
+      "std": 0.07262932526749823,
+      "per_fold": [
+        0.4137930321046496,
+        0.5882352076124694,
+        0.46666658888890183,
+        0.5599999253333433,
+        0.5486725178165913
+      ],
+      "n_folds": 5
+    }
+  },
+  "aggregate_stage1_val": {
+    "AUROC": {
+      "mean": 0.6121284593752173,
+      "std": 0.042537489397400284,
+      "per_fold": [
+        0.5376773660283787,
+        0.6233640997382559,
+        0.6251549800247969,
+        0.6288745006199201,
+        0.6455713504647349
+      ],
+      "n_folds": 5
+    },
+    "Dice": {
+      "mean": 0.5291762324469442,
+      "std": 0.02818552530331142,
+      "per_fold": [
+        0.497109797854925,
+        0.5277777411265457,
+        0.5472636543649924,
+        0.5076922686390563,
+        0.5660377002492012
+      ],
+      "n_folds": 5
+    }
+  },
+  "aggregate_stage1_test": {
+    "AUROC": {
+      "mean": 0.5846702317290553,
+      "std": 0.0,
+      "per_fold": [
+        0.5846702317290553,
+        0.5846702317290553,
+        0.5846702317290553,
+        0.5846702317290553,
+        0.5846702317290553
+      ],
+      "n_folds": 5
+    },
+    "Dice": {
+      "mean": 0.4150942613029695,
+      "std": 6.206335383118183e-17,
+      "per_fold": [
+        0.41509426130296956,
+        0.41509426130296956,
+        0.41509426130296956,
+        0.41509426130296956,
+        0.41509426130296956
+      ],
+      "n_folds": 5
+    }
+  },
+  "pooled_cv_val_negative_summary": {
+    "stage1_auroc": 0.6119418586738848,
+    "stage2_auroc": 0.6675964437402345,
+    "stage1_bootstrap_auroc": {
+      "mean": 0.611884314782262,
+      "lower": 0.5730864072136734,
+      "upper": 0.64955568173239,
+      "n": 900,
+      "n_boot_effective": 2000,
+      "point_estimate": 0.6119418586738848
+    },
+    "stage2_bootstrap_auroc": {
+      "mean": 0.6673740034964125,
+      "lower": 0.6292580751199081,
+      "upper": 0.704392130086662,
+      "n": 900,
+      "n_boot_effective": 2000,
+      "point_estimate": 0.6675964437402345
+    },
+    "paired_auroc_diff_stage2_minus_stage1": {
+      "mean_diff": 0.05548968871415065,
+      "lower": 0.024917601183669303,
+      "upper": 0.08644647904520297,
+      "n": 900,
+      "n_boot_effective": 2000
+    },
+    "significant_improvement": true,
+    "power_analysis": {
+      "delta_auroc": 0.05,
+      "null_auroc": 0.6119418586738848,
+      "alt_auroc": 0.6619418586738849,
+      "prevalence": 0.34,
+      "alpha": 0.05,
+      "power": 0.8,
+      "approx_n_per_group": 2215,
+      "approx_total_same_set": 2215,
+      "note": "Approximate; use bootstrap CI on actual CV predictions for reporting."
+    },
+    "interpretation": "Stage 2 significantly better than Stage 1 transfer"
+  },
+  "held_out_test_negative_summary": {
+    "stage1_auroc": 0.5846702317290553,
+    "stage2_auroc": 0.6265597147950088,
+    "stage1_bootstrap_auroc": {
+      "mean": 0.5878542970961719,
+      "lower": 0.46216464092405796,
+      "upper": 0.7095681408855432,
+      "n": 100,
+      "n_boot_effective": 2000,
+      "point_estimate": 0.5846702317290553
+    },
+    "stage2_bootstrap_auroc": {
+      "mean": 0.6288227317345189,
+      "lower": 0.5025885130494506,
+      "upper": 0.7465298474754558,
+      "n": 100,
+      "n_boot_effective": 2000,
+      "point_estimate": 0.6265597147950088
+    },
+    "paired_auroc_diff_stage2_minus_stage1": {
+      "mean_diff": 0.040968434638347,
+      "lower": -0.03993055555555558,
+      "upper": 0.12088448660714284,
+      "n": 100,
+      "n_boot_effective": 2000
+    },
+    "significant_improvement": false,
+    "power_analysis": {
+      "delta_auroc": 0.05,
+      "null_auroc": 0.5846702317290553,
+      "alt_auroc": 0.6346702317290553,
+      "prevalence": 0.34,
+      "alpha": 0.05,
+      "power": 0.8,
+      "approx_n_per_group": 2230,
+      "approx_total_same_set": 2230,
+      "note": "Approximate; use bootstrap CI on actual CV predictions for reporting."
+    },
+    "interpretation": "No significant Stage 2 improvement over Stage 1 (supports negative/null result)"
+  },
+  "held_out_test_ensemble": {
+    "Dice": 0.4999999218750122,
+    "F1": 0.5,
+    "Recall": 0.47058823529411764,
+    "AUROC": 0.6341354723707665
+  },
+  "power_analysis": {
+    "delta_auroc": 0.05,
+    "null_auroc": 0.58,
+    "alt_auroc": 0.63,
+    "prevalence": 0.34,
+    "alpha": 0.05,
+    "power": 0.8,
+    "approx_n_per_group": 2231,
+    "approx_total_same_set": 2231,
+    "note": "Approximate; use bootstrap CI on actual CV predictions for reporting."
+  },
+  "learning_curves": [],
+  "config_snapshot": {
+    "gaze_lambda": 0.05,
+    "stage2_mix_oral": false,
+    "run_gaze_ablation": true,
+    "gaze_ablation_lambda": 0.0
+  }
+}

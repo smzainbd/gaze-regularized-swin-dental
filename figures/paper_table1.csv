@@ -1,0 +1,6 @@
+Model,CV validation AUROC,Held-out test AUROC
+Stage-1 (OralXrays → Tufts),"0.612 [0.573, 0.650]","0.585 [0.462, 0.710]"
+Stage-2 gaze (λ>0),"0.668 [0.629, 0.704]","0.627 [0.503, 0.747]"
+Stage-2 ablation (λ=0),0.675 ± 0.034,0.612 ± 0.013
+ResNet-50 external,0.662 ± 0.020,"0.611 [0.478, 0.736]"
+Stage-2 refit (secondary),—,"0.622 [0.496, 0.741]"

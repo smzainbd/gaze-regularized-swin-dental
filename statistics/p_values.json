@@ -1,0 +1,189 @@
+{
+  "dentex_ood_discrimination": {
+    "stage2_auroc": {
+      "mean": 0.48127470531714517,
+      "lower": 0.41261309256088846,
+      "upper": 0.5516898450179805,
+      "n": 1005,
+      "n_boot_effective": 2000,
+      "point_estimate": 0.4818608324043107
+    },
+    "stage1_auroc": {
+      "mean": 0.5190150017931128,
+      "lower": 0.4470396264626116,
+      "upper": 0.588827655724294,
+      "n": 1005,
+      "n_boot_effective": 2000,
+      "point_estimate": 0.5179765886287625
+    },
+    "paired_auroc_diff_stage2_minus_stage1": {
+      "mean_diff": -0.037740296475967564,
+      "lower": -0.12857691172257993,
+      "upper": 0.048937336971816243,
+      "n": 1005,
+      "n_boot_effective": 2000
+    },
+    "significant_at_0.05": false,
+    "interpretation": "No discrimination difference on DENTEX (null OOD result)",
+    "n_images": 1005,
+    "prevalence": 0.9313432835820895
+  },
+  "wilcoxon_H1_gaze_vs_baseline_DENTEX": {
+    "statistic": 12763.5,
+    "p_value": 1.0,
+    "stage2_threshold": 0.7939968109130859,
+    "stage1_threshold": 0.0962478294968605,
+    "threshold_source": "transferred_from_tufts_refit",
+    "stage2_accuracy": 0.4925373134328358,
+    "stage1_accuracy": 0.7373134328358208,
+    "significant_at_0.05": false,
+    "basis": "per-image correctness at transferred Tufts Youden thresholds (fallback: DENTEX Youden)"
+  },
+  "wilcoxon_shipped_threshold_DENTEX_diagnostic_only": {
+    "statistic": 464535.0,
+    "p_value": 3.0980298457996448e-164,
+    "gaze_dice": 0.9617373269817098,
+    "baseline_dice": 0.0,
+    "stage2_positive_rate": 0.9930348258706467,
+    "stage1_positive_rate": 0.0,
+    "stage2_accuracy": 0.9263681592039801,
+    "stage1_accuracy": 0.06865671641791045,
+    "stage2_degenerate": false,
+    "stage1_degenerate": true,
+    "warning": "Accuracy at shipped thresholds is base-rate driven; not a discrimination claim."
+  },
+  "mcnemar_tufts_healthy_subset": {
+    "p_value": 0.7744140625,
+    "significant_at_0.05": false,
+    "table": [
+      [
+        51,
+        5
+      ],
+      [
+        7,
+        3
+      ]
+    ],
+    "pairing": {
+      "layout": "paired_probs",
+      "stage2_file": "results/stage2_refit_test_predictions.csv",
+      "stage2_prob_col": "prob_stage2_refit",
+      "stage2_threshold": 0.7939968109130859,
+      "stage1_threshold": 0.0962478294968605,
+      "threshold_source": "stored_refit_metrics"
+    },
+    "note": "Pilot / underpowered (n_healthy ~66). Primary detection claim is NB04 CV."
+  },
+  "forgetting_ratio": {
+    "stage1_OralXrays_Dice": 0.962593512208672,
+    "stage2_OralXrays_Dice": 0.9244712951037061,
+    "forgetting_ratio": 0.03960365057675738,
+    "stage2_source": "results/stage2_oralxray_metrics.json",
+    "stage2_checkpoint": "/content/drive/MyDrive/DENTAL/checkpoints/stage2_gaze_fold1_best.pth"
+  },
+  "inputs": {
+    "stage1_metrics": "results/stage1_metrics.json",
+    "stage2_oralxray_metrics": "results/stage2_oralxray_metrics.json",
+    "stage1_tufts_preds": "results/stage1_tufts_zero_shot_predictions.csv",
+    "stage2_tufts_preds": "results/stage2_refit_test_predictions.csv",
+    "stage2_refit_metrics": "results/stage2_refit_metrics.json",
+    "dentex_stage2_preds": "results/dentex_per_image_predictions.csv",
+    "dentex_baseline_preds": "results/dentex_baseline_predictions.csv"
+  },
+  "n_boot": 2000,
+  "note": "Secondary confirmatory tests. Primary detection claim = NB04 CV + bootstrap. DENTEX reportable claim = AUROC discrimination (not shipped-threshold accuracy).",
+  "dentex_ood_hardened": {
+    "n_images": 1005,
+    "n_positive": 936,
+    "n_negative": 69,
+    "prevalence": 0.9313432835820895,
+    "random_ap_baseline": 0.9313432835820895,
+    "stage2_file": ".\\results\\dentex_per_image_predictions.csv",
+    "stage1_file": ".\\results\\dentex_baseline_predictions.csv",
+    "auroc": {
+      "stage2": {
+        "point_estimate": 0.4818608324043107,
+        "mean": 0.48127470531714517,
+        "lower": 0.41261309256088846,
+        "upper": 0.5516898450179805,
+        "n": 1005,
+        "n_boot_effective": 2000
+      },
+      "stage1": {
+        "point_estimate": 0.5179765886287625,
+        "mean": 0.5190150017931128,
+        "lower": 0.4470396264626116,
+        "upper": 0.588827655724294,
+        "n": 1005,
+        "n_boot_effective": 2000
+      },
+      "paired_diff_stage2_minus_stage1": {
+        "mean_diff": -0.037740296475967564,
+        "lower": -0.12857691172257993,
+        "upper": 0.048937336971816243,
+        "n": 1005,
+        "n_boot_effective": 2000,
+        "point_diff": -0.03611575622445179
+      },
+      "significant_at_0.05": false
+    },
+    "average_precision": {
+      "stage2": {
+        "point_estimate": 0.9321263277063777,
+        "mean": 0.9325423410110428,
+        "lower": 0.9103768565013931,
+        "upper": 0.9525114143712747,
+        "n": 1005,
+        "n_boot_effective": 2000
+      },
+      "stage1": {
+        "point_estimate": 0.9325140622873851,
+        "mean": 0.9330680891739749,
+        "lower": 0.910462653862538,
+        "upper": 0.9541958841763123,
+        "n": 1005,
+        "n_boot_effective": 2000
+      },
+      "paired_diff_stage2_minus_stage1": {
+        "mean_diff": -0.0005257481629319505,
+        "lower": -0.021537922117655435,
+        "upper": 0.021305592262471643,
+        "n": 1005,
+        "n_boot_effective": 2000,
+        "point_diff": -0.0003877345810073818
+      },
+      "significant_at_0.05": false,
+      "note": "AP is prevalence-sensitive; compare also to random_ap_baseline \u2248 prevalence."
+    },
+    "balanced_subsample_auroc": {
+      "ok": true,
+      "n_negatives": 69,
+      "n_positives_per_draw": 69,
+      "balanced_n_per_draw": 138,
+      "n_draws_requested": 1000,
+      "stage1_auroc_balanced": {
+        "mean": 0.5187433312329344,
+        "lower": 0.4498792270531401,
+        "upper": 0.5821334803612687,
+        "n_draws_effective": 1000
+      },
+      "stage2_auroc_balanced": {
+        "mean": 0.4815276202478471,
+        "lower": 0.41282818735559756,
+        "upper": 0.547810333963453,
+        "n_draws_effective": 1000
+      },
+      "paired_auroc_diff_stage2_minus_stage1_balanced": {
+        "mean": -0.03721571098508717,
+        "lower": -0.11573724007561448,
+        "upper": 0.04232566687670647,
+        "n_draws_effective": 1000
+      },
+      "discrimination_significant_balanced": false,
+      "interpretation": "No discrimination difference on balanced DENTEX draws (null OOD)"
+    },
+    "interpretation": "No discrimination difference on balanced DENTEX draws (null OOD)",
+    "note": "DENTEX binary labels are heavily positive. Report AUROC + AP + balanced-subsample AUROC; do not report shipped-threshold accuracy/Dice as OOD claims."
+  }
+}

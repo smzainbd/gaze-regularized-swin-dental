@@ -1,0 +1,7 @@
+{
+    "Dice": 0.9617373269817098,
+    "F1": 0.9617373319544984,
+    "Recall": 0.9935897435897436,
+    "AUROC": 0.4818608324043107,
+    "checkpoint": "checkpoints/stage2_refit_best.pth"
+}

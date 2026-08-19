@@ -1,0 +1,76 @@
+{
+  "mode": "gpu",
+  "real_train_done": true,
+  "code_check_passed": true,
+  "smoke_test": false,
+  "num_folds": 1,
+  "val_metrics": {
+    "fold": 0,
+    "Dice": 0.9711221082049417,
+    "F1": 0.9711221122112211,
+    "Recall": 0.9453815261044177,
+    "AUROC": 0.9602074966532798,
+    "opt_threshold": 0.06089894101023674
+  },
+  "best_val_dice": -1.0,
+  "stage1_metrics": {
+    "split": "OralXray 80/10/10",
+    "training_dataset": "oralxray",
+    "aggregate": {
+      "Dice": {
+        "mean": 0.9711221082049417,
+        "std": 0.0,
+        "per_fold": [
+          0.9711221082049417
+        ]
+      },
+      "F1": {
+        "mean": 0.9711221122112211,
+        "std": 0.0,
+        "per_fold": [
+          0.9711221122112211
+        ]
+      },
+      "AUROC": {
+        "mean": 0.9602074966532798,
+        "std": 0.0,
+        "per_fold": [
+          0.9602074966532798
+        ]
+      },
+      "Recall": {
+        "mean": 0.9453815261044177,
+        "std": 0.0,
+        "per_fold": [
+          0.9453815261044177
+        ]
+      }
+    },
+    "val_metrics": {
+      "fold": 0,
+      "Dice": 0.9711221082049417,
+      "F1": 0.9711221122112211,
+      "Recall": 0.9453815261044177,
+      "AUROC": 0.9602074966532798,
+      "opt_threshold": 0.06089894101023674
+    },
+    "oralxray_test_metrics": {
+      "Dice": 0.962593512208672,
+      "F1": 0.9625935162094763,
+      "Recall": 0.9301204819277108,
+      "AUROC": 0.9559571619812584,
+      "opt_threshold": 0.08187805116176605,
+      "confusion_matrix": {
+        "TN": 21,
+        "FP": 3,
+        "FN": 87,
+        "TP": 1158
+      },
+      "precision": 0.9974160206718347,
+      "specificity": 0.875
+    },
+    "best_val_Dice": -1.0,
+    "sweep_params_applied": false,
+    "gaze_lambda_used": 0.0
+  }
+}

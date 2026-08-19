@@ -1,0 +1,40 @@
+{
+  "model": "resnet50_imagenet",
+  "role": "external_baseline_refit_style",
+  "checkpoint": "/content/drive/MyDrive/DENTAL/checkpoints/resnet50_refit_best.pth",
+  "val_AUROC_fold0": 0.6703402672544428,
+  "test_metrics": {
+    "AUROC": 0.6109625668449198,
+    "Dice": 0.4745761907497982,
+    "opt_threshold": 0.7541971802711487,
+    "n": 100,
+    "prevalence": 0.34
+  },
+  "test_bootstrap_auroc": {
+    "mean": 0.6130912735359675,
+    "lower": 0.47822147817460314,
+    "upper": 0.7362000159629658,
+    "n": 100,
+    "n_boot_effective": 2000,
+    "point_estimate": 0.6109625668449198
+  },
+  "n_train": 720,
+  "n_val": 180,
+  "n_test": 100,
+  "smoke": false,
+  "predictions_csv": "/content/drive/MyDrive/DENTAL/results/resnet50_baseline_test_predictions.csv",
+  "paired_diff_resnet_minus_stage1": {
+    "mean_diff": 0.02523697643979567,
+    "lower": -0.0886912972085387,
+    "upper": 0.13462001489876804,
+    "n": 100,
+    "n_boot_effective": 2000
+  },
+  "paired_diff_stage2_minus_resnet": {
+    "mean_diff": 0.010554448652816368,
+    "lower": -0.08658941709111481,
+    "upper": 0.111159620098039,
+    "n": 100,
+    "n_boot_effective": 2000
+  }
+}

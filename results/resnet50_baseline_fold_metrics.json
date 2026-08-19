@@ -1,0 +1,42 @@
+[
+  {
+    "fold": 0,
+    "val_AUROC": 0.6856316297010607,
+    "test_AUROC": 0.6145276292335116,
+    "test_Dice": 0.38297864191943787,
+    "checkpoint": "/content/drive/MyDrive/DENTAL/checkpoints/resnet50_fold0_best.pth",
+    "history_len": 14
+  },
+  {
+    "fold": 1,
+    "val_AUROC": 0.6454057032649125,
+    "test_AUROC": 0.5610516934046346,
+    "test_Dice": 0.4137930321046496,
+    "checkpoint": "/content/drive/MyDrive/DENTAL/checkpoints/resnet50_fold1_best.pth",
+    "history_len": 13
+  },
+  {
+    "fold": 2,
+    "val_AUROC": 0.674473067915691,
+    "test_AUROC": 0.6261140819964349,
+    "test_Dice": 0.5135134441198048,
+    "checkpoint": "/content/drive/MyDrive/DENTAL/checkpoints/resnet50_fold2_best.pth",
+    "history_len": 10
+  },
+  {
+    "fold": 3,
+    "val_AUROC": 0.667171786747486,
+    "test_AUROC": 0.6639928698752228,
+    "test_Dice": 0.49999991666668053,
+    "checkpoint": "/content/drive/MyDrive/DENTAL/checkpoints/resnet50_fold3_best.pth",
+    "history_len": 22
+  },
+  {
+    "fold": 4,
+    "val_AUROC": 0.6364133406232915,
+    "test_AUROC": 0.5762032085561497,
+    "test_Dice": 0.5333332825396874,
+    "checkpoint": "/content/drive/MyDrive/DENTAL/checkpoints/resnet50_fold4_best.pth",
+    "history_len": 11
+  }
+]

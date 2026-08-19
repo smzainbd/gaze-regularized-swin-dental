@@ -1,0 +1,93 @@
+{
+  "n_images": 1005,
+  "n_positive": 936,
+  "n_negative": 69,
+  "prevalence": 0.9313432835820895,
+  "random_ap_baseline": 0.9313432835820895,
+  "stage2_file": ".\\results\\dentex_per_image_predictions.csv",
+  "stage1_file": ".\\results\\dentex_baseline_predictions.csv",
+  "auroc": {
+    "stage2": {
+      "point_estimate": 0.4818608324043107,
+      "mean": 0.48127470531714517,
+      "lower": 0.41261309256088846,
+      "upper": 0.5516898450179805,
+      "n": 1005,
+      "n_boot_effective": 2000
+    },
+    "stage1": {
+      "point_estimate": 0.5179765886287625,
+      "mean": 0.5190150017931128,
+      "lower": 0.4470396264626116,
+      "upper": 0.588827655724294,
+      "n": 1005,
+      "n_boot_effective": 2000
+    },
+    "paired_diff_stage2_minus_stage1": {
+      "mean_diff": -0.037740296475967564,
+      "lower": -0.12857691172257993,
+      "upper": 0.048937336971816243,
+      "n": 1005,
+      "n_boot_effective": 2000,
+      "point_diff": -0.03611575622445179
+    },
+    "significant_at_0.05": false
+  },
+  "average_precision": {
+    "stage2": {
+      "point_estimate": 0.9321263277063777,
+      "mean": 0.9325423410110428,
+      "lower": 0.9103768565013931,
+      "upper": 0.9525114143712747,
+      "n": 1005,
+      "n_boot_effective": 2000
+    },
+    "stage1": {
+      "point_estimate": 0.9325140622873851,
+      "mean": 0.9330680891739749,
+      "lower": 0.910462653862538,
+      "upper": 0.9541958841763123,
+      "n": 1005,
+      "n_boot_effective": 2000
+    },
+    "paired_diff_stage2_minus_stage1": {
+      "mean_diff": -0.0005257481629319505,
+      "lower": -0.021537922117655435,
+      "upper": 0.021305592262471643,
+      "n": 1005,
+      "n_boot_effective": 2000,
+      "point_diff": -0.0003877345810073818
+    },
+    "significant_at_0.05": false,
+    "note": "AP is prevalence-sensitive; compare also to random_ap_baseline \u2248 prevalence."
+  },
+  "balanced_subsample_auroc": {
+    "ok": true,
+    "n_negatives": 69,
+    "n_positives_per_draw": 69,
+    "balanced_n_per_draw": 138,
+    "n_draws_requested": 1000,
+    "stage1_auroc_balanced": {
+      "mean": 0.5187433312329344,
+      "lower": 0.4498792270531401,
+      "upper": 0.5821334803612687,
+      "n_draws_effective": 1000
+    },
+    "stage2_auroc_balanced": {
+      "mean": 0.4815276202478471,
+      "lower": 0.41282818735559756,
+      "upper": 0.547810333963453,
+      "n_draws_effective": 1000
+    },
+    "paired_auroc_diff_stage2_minus_stage1_balanced": {
+      "mean": -0.03721571098508717,
+      "lower": -0.11573724007561448,
+      "upper": 0.04232566687670647,
+      "n_draws_effective": 1000
+    },
+    "discrimination_significant_balanced": false,
+    "interpretation": "No discrimination difference on balanced DENTEX draws (null OOD)"
+  },
+  "interpretation": "No discrimination difference on balanced DENTEX draws (null OOD)",
+  "note": "DENTEX binary labels are heavily positive. Report AUROC + AP + balanced-subsample AUROC; do not report shipped-threshold accuracy/Dice as OOD claims."
+}

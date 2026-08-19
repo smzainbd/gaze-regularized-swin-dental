@@ -1,0 +1,11 @@
+{
+  "Dice": 0.9244712951037061,
+  "F1": 0.9244712990936556,
+  "Recall": 0.8602409638554217,
+  "AUROC": 0.9482262382864792,
+  "opt_threshold": 0.5229129195213318,
+  "n_total": 1269,
+  "n_labeled": 1269,
+  "n_unlabeled": 0,
+  "checkpoint": "/content/drive/MyDrive/DENTAL/checkpoints/stage2_gaze_fold1_best.pth"
+}

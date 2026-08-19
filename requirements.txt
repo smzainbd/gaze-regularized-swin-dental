@@ -1,0 +1,20 @@
+# Training (GPU recommended)
+torch
+torchvision
+transformers
+peft
+torchao>=0.16.0
+
+# Data / metrics / figures
+numpy
+pandas
+scikit-learn
+scipy
+pillow
+opencv-python
+matplotlib
+seaborn
+tqdm
+optuna
+imagehash
+pyyaml

@@ -1,0 +1,84 @@
+{
+  "split": "OralXray 80/10/10",
+  "training_dataset": "oralxray",
+  "aggregate": {
+    "Dice": {
+      "mean": 0.9711221082049417,
+      "std": 0.0,
+      "per_fold": [
+        0.9711221082049417
+      ]
+    },
+    "F1": {
+      "mean": 0.9711221122112211,
+      "std": 0.0,
+      "per_fold": [
+        0.9711221122112211
+      ]
+    },
+    "AUROC": {
+      "mean": 0.9602074966532798,
+      "std": 0.0,
+      "per_fold": [
+        0.9602074966532798
+      ]
+    },
+    "Recall": {
+      "mean": 0.9453815261044177,
+      "std": 0.0,
+      "per_fold": [
+        0.9453815261044177
+      ]
+    }
+  },
+  "val_metrics": {
+    "fold": 0,
+    "Dice": 0.9711221082049417,
+    "F1": 0.9711221122112211,
+    "Recall": 0.9453815261044177,
+    "AUROC": 0.9602074966532798,
+    "opt_threshold": 0.06089894101023674
+  },
+  "oralxray_test_metrics": {
+    "Dice": 0.962593512208672,
+    "F1": 0.9625935162094763,
+    "Recall": 0.9301204819277108,
+    "AUROC": 0.9559571619812584,
+    "opt_threshold": 0.08187805116176605,
+    "confusion_matrix": {
+      "TN": 21,
+      "FP": 3,
+      "FN": 87,
+      "TP": 1158
+    },
+    "precision": 0.9974160206718347,
+    "specificity": 0.875
+  },
+  "best_val_Dice": -1.0,
+  "sweep_params_applied": false,
+  "gaze_lambda_used": 0.0,
+  "phase": "stage1_baseline_no_gaze",
+  "evaluation_dataset_primary": "oralxray_test",
+  "evaluation_dataset_secondary": "tufts_test_zero_shot",
+  "best_epoch": 20,
+  "OralXray_test_Dice": 0.962593512208672,
+  "OralXray_test_F1": 0.9625935162094763,
+  "OralXray_test_Recall": 0.9301204819277108,
+  "OralXray_test_AUROC": 0.9559571619812584,
+  "OralXray_CM": {
+    "TN": 21,
+    "FP": 3,
+    "FN": 87,
+    "TP": 1158
+  },
+  "Tufts_zero_shot_Dice": 0.4383561043347802,
+  "Tufts_zero_shot_F1": 0.4383561643835616,
+  "Tufts_zero_shot_Recall": 0.47058823529411764,
+  "Tufts_zero_shot_AUROC": 0.5240641711229946,
+  "Tufts_zero_shot_CM": {
+    "TN": 43,
+    "FP": 23,
+    "FN": 18,
+    "TP": 16
+  }
+}

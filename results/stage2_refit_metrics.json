@@ -1,0 +1,62 @@
+{
+  "role": "secondary_refit_eval",
+  "note": "Trained on full train_split (CV pool). Held-out test evaluated once at the end. Primary detection claims must use NB04 5-fold CV, not this table alone.",
+  "n_train": 900,
+  "num_epochs": 17,
+  "epoch_source": "cv_median_best_epoch=16",
+  "refit_test_metrics": {
+    "Dice": 0.4827585374554246,
+    "F1": 0.4827586206896552,
+    "Recall": 0.4117647058823529,
+    "AUROC": 0.6216577540106952,
+    "opt_threshold": 0.7939968109130859
+  },
+  "stage1_test_metrics": {
+    "Dice": 0.41509426130296956,
+    "F1": 0.41509433962264153,
+    "Recall": 0.3235294117647059,
+    "AUROC": 0.5846702317290553,
+    "opt_threshold": 0.0962478294968605
+  },
+  "negative_summary": {
+    "stage1_auroc": 0.5846702317290553,
+    "stage2_auroc": 0.6216577540106952,
+    "stage1_bootstrap_auroc": {
+      "mean": 0.5878542970961719,
+      "lower": 0.46216464092405796,
+      "upper": 0.7095681408855432,
+      "n": 100,
+      "n_boot_effective": 2000,
+      "point_estimate": 0.5846702317290553
+    },
+    "stage2_bootstrap_auroc": {
+      "mean": 0.6236457221887838,
+      "lower": 0.4958447795248503,
+      "upper": 0.7410906133739215,
+      "n": 100,
+      "n_boot_effective": 2000,
+      "point_estimate": 0.6216577540106952
+    },
+    "paired_auroc_diff_stage2_minus_stage1": {
+      "mean_diff": 0.035791425092612045,
+      "lower": -0.04515506411692223,
+      "upper": 0.11729677852884818,
+      "n": 100,
+      "n_boot_effective": 2000
+    },
+    "significant_improvement": false,
+    "power_analysis": {
+      "delta_auroc": 0.05,
+      "null_auroc": 0.5846702317290553,
+      "alt_auroc": 0.6346702317290553,
+      "prevalence": 0.34,
+      "alpha": 0.05,
+      "power": 0.8,
+      "approx_n_per_group": 2230,
+      "approx_total_same_set": 2230,
+      "note": "Approximate; use bootstrap CI on actual CV predictions for reporting."
+    },
+    "interpretation": "No significant Stage 2 improvement over Stage 1 (supports negative/null result)"
+  },
+  "checkpoint": "checkpoints/stage2_refit_best.pth"
+}
